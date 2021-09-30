@@ -19,7 +19,8 @@ public class ConsumerController {
 	
 	@GetMapping("/getAllConsumerList")
 	public void getAllConsumerList() {
-		consumerService.getAllConsumerList();
+		consumerService.getAllConsumerList();  
+		consumerService.getAllConsumerList();  
 		
 	}
 	
