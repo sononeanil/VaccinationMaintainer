@@ -20,7 +20,7 @@ import lombok.Setter;
 @Setter
 @Getter
 @AllArgsConstructor
-@Table(name = "consumer")
+//@Table(name = "consumer")
 public class ConsumerEntity {
 	
 	@Id

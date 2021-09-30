@@ -5,7 +5,13 @@ import org.springframework.stereotype.Service;
 @Service
 public class ConsumerService {
 
-	public void consumerService() {
+	
+
+	public void getAllConsumerList() {
+		
+	}
+
+	public void createConsumer() {
 		
 	}
 
