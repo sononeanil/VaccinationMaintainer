@@ -24,15 +24,20 @@ public class VaccinationMaintainerApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		VaccinationCentre vaccinationCentre = new VaccinationCentre(0, "PCMC School", "Pune", "Covishiedl", "Paid", "Pawar", "Sunita");
-		VaccinationCentre vaccinationCentre1 = new VaccinationCentre(0, "PCMC School", "Wakad", "Covishiedl", "Free", "Singh", "Prarthana");
+		VaccinationCentre vaccinationCentre = new VaccinationCentre(0, "Nasik PCMC School", "Pune", "Co-Vaccine", "Paid", "sonone", "Sunita");
+		VaccinationCentre vaccinationCentre1 = new VaccinationCentre(0, "Nagpur School", "Wakad", "Co-Vaccine", "Free", "Waghmare", "Prarthana");
 		
 		ArrayList<VaccinationCentre> lstCVaccinationCentres = new ArrayList<>(2);
 		lstCVaccinationCentres.add(vaccinationCentre);
 		lstCVaccinationCentres.add(vaccinationCentre1);
 		
-		Consumer consumerEntity = new Consumer(0,"Anil", "Sonone", "M", "40", "Pune", "Aadhar Card", "Abcd", lstCVaccinationCentres);
+		
+		Consumer consumerEntity = new Consumer(0,"PuneetKumar", "Chaddha", "M", "40", "Indore", "Pan Card", "Abcd", lstCVaccinationCentres);
 		consumerRepository.save(consumerEntity);
+		
+		Consumer consumerEntity1 = new Consumer(1, "Sachin", null, null, null, null, null, null, null);	
+		
+		consumerRepository.save(consumerEntity1);
 	}
 
 }

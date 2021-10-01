@@ -14,30 +14,32 @@ import javax.persistence.Table;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
 @Setter
 @Getter
 @AllArgsConstructor
+@NoArgsConstructor
 //@Table(name = "consumer")
-public class ConsumerEntity {
+public class Consumer {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private long id;
 	private String firstName;
 	private String lastName;
-	/*
-	 * private String gender; private String age; private String location; private
-	 * String identityType; private String identityNumber;
-	 */
+	  private String gender; 
+	  private String age; 
+	  private String location; 
+	  private String identityType; 
+	  private String identityNumber;
+	 
 	
-	/*
-	 * @OneToMany(cascade = CascadeType.ALL)
-	 * 
-	 * @JoinColumn(name = "consumer_foreignKey", referencedColumnName="id")
-	 * List<VaccinationCentreEntity> lstVaccinationCentre = new ArrayList<>(2);
-	 */
+	  @OneToMany(cascade = CascadeType.ALL)
+	  @JoinColumn(name = "consumer_foreignKey", referencedColumnName="id")
+	  List<VaccinationCentre> lstVaccinationCentre = new ArrayList<>(2);
+	 
 
 }
