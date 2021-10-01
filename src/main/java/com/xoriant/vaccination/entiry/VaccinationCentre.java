@@ -14,7 +14,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class VaccinationCentreEntity {
+@NoArgsConstructor
+public class VaccinationCentre {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -25,6 +26,5 @@ public class VaccinationCentreEntity {
 	private String type;
 	private String facilitatorName;
 	private String injectedBy;
-
 
 }
