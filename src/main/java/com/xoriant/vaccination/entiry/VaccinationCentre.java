@@ -19,7 +19,7 @@ public class VaccinationCentre {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long vaccinationCentreId;
 	private String name;
 	private String location;
 	private String vaccinName;

@@ -24,20 +24,29 @@ public class VaccinationMaintainerApplication implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		VaccinationCentre vaccinationCentre = new VaccinationCentre(0, "Nasik PCMC School", "Pune", "Co-Vaccine", "Paid", "sonone", "Sunita");
-		VaccinationCentre vaccinationCentre1 = new VaccinationCentre(0, "Nagpur School", "Wakad", "Co-Vaccine", "Free", "Waghmare", "Prarthana");
 		
-		ArrayList<VaccinationCentre> lstCVaccinationCentres = new ArrayList<>(2);
-		lstCVaccinationCentres.add(vaccinationCentre);
-		lstCVaccinationCentres.add(vaccinationCentre1);
+		  VaccinationCentre vaccinationCentre = new VaccinationCentre(0, "DPS School",
+		  "Chandhigarh", "Covishield", "free", "sonone", "Sunita"); VaccinationCentre
+		  vaccinationCentre1 = new VaccinationCentre(0, "Nagpur School", "Wakad",
+		  "Covishield", "free", "Waghmare", "Prarthana");
+		  
+		  ArrayList<VaccinationCentre> lstCVaccinationCentres = new ArrayList<>(2);
+		  lstCVaccinationCentres.add(vaccinationCentre);
+		  lstCVaccinationCentres.add(vaccinationCentre1);
+		  
+		  
+		  Consumer consumerEntity = new Consumer(0,"Sunil", "Kumar", "M", "25",
+		  "Panjab", "Pan Card", "AXG9876", lstCVaccinationCentres);
+		  consumerRepository.save(consumerEntity);
+		  
+		  Consumer consumerEntity1 = new Consumer(1, "Sachin", null, null, null, null,
+		  null, null, null);
+		  
+		  consumerRepository.save(consumerEntity1);
+		 long l = 4;
+		 Consumer consumerEntity2 = consumerRepository.findByConsumerId(2);  
 		
-		
-		Consumer consumerEntity = new Consumer(0,"PuneetKumar", "Chaddha", "M", "40", "Indore", "Pan Card", "Abcd", lstCVaccinationCentres);
-		consumerRepository.save(consumerEntity);
-		
-		Consumer consumerEntity1 = new Consumer(1, "Sachin", null, null, null, null, null, null, null);	
-		
-		consumerRepository.save(consumerEntity1);
+		System.out.println("**************" + consumerEntity2); 
 	}
-
+ 
 }
