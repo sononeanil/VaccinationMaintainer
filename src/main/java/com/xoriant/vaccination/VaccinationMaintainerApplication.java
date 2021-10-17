@@ -39,14 +39,15 @@ public class VaccinationMaintainerApplication implements CommandLineRunner{
 		  "Panjab", "Pan Card", "AXG9876", lstCVaccinationCentres);
 		  consumerRepository.save(consumerEntity);
 		  
-		  Consumer consumerEntity1 = new Consumer(1, "Sachin", null, null, null, null,
-		  null, null, null);
+			/*
+			 * Consumer consumerEntity1 = new Consumer(1, "Sachin", null, null, null, null,
+			 * null, null, null);
+			 */
 		  
-		  consumerRepository.save(consumerEntity1);
+//		  consumerRepository.save(consumerEntity1);
 		 long l = 4;
 		 Consumer consumerEntity2 = consumerRepository.findByConsumerId(2);  
 		
-		System.out.println("**************" + consumerEntity2); 
 	}
  
 }
