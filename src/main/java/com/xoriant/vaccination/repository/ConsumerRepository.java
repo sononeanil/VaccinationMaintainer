@@ -8,4 +8,6 @@ import com.xoriant.vaccination.entiry.Consumer;
 @Repository
 public interface ConsumerRepository extends JpaRepository<Consumer, Long> {
 
+	Consumer findByConsumerId(long i);
+
 }

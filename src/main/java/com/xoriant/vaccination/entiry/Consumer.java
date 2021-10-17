@@ -27,7 +27,7 @@ public class Consumer {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private long id;
+	private long consumerId;
 	private String firstName;
 	private String lastName;
 	  private String gender; 
@@ -38,7 +38,7 @@ public class Consumer {
 	 
 	
 	  @OneToMany(cascade = CascadeType.ALL)
-	  @JoinColumn(name = "consumer_foreignKey", referencedColumnName="id")
+	  @JoinColumn(name = "consumer_foreignKey", referencedColumnName="consumerId")
 	  List<VaccinationCentre> lstVaccinationCentre = new ArrayList<>(2);
 	 
 
